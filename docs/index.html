@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="ja"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gitを起点に、SaaS運用をシンプルに</title><meta name="description" content="Gitを起点にSaaS運用を整理・標準化。デプロイ、環境管理、運用フローを再現可能な形に整えます。"><style>:root{--bg-main: #ffffff;--bg-subtle: #f8fafc;--bg-accent: #eef2ff;--text-main: #0f172a;--text-sub: #475569;--text-muted: #64748b;--primary: #4f46e5;--primary-dark: #3730a3;--accent: #06b6d4;--border: #e2e8f0}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;line-height:1.7;color:var(--text-main);background:linear-gradient(180deg,#fff,#f9fafb)}.container{max-width:1280px;margin:0 auto;padding:96px 48px}section{margin-bottom:120px}h1{font-size:3rem;line-height:1.15;margin-bottom:24px;background:linear-gradient(90deg,var(--text-main),var(--primary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}h2{font-size:1.6rem;margin-bottom:16px;position:relative}h2:before{content:"";position:absolute;left:-20px;top:.4em;width:4px;height:1.2em;background:linear-gradient(180deg,var(--primary),var(--accent));border-radius:2px}p{margin-bottom:16px}.subtitle{font-size:1.2rem;color:var(--text-sub)}.hero-summary{font-size:1.05rem;color:var(--text-sub);margin-top:20px}.hero{max-width:1000px}.hero-principles{margin-top:32px;padding:28px 32px;background:linear-gradient(180deg,var(--bg-subtle),var(--bg-accent));border:1px solid var(--border);border-radius:16px}.hero-principles ul{list-style:none;padding:0;margin:0}.hero-principles li{margin-bottom:12px;padding-left:26px;position:relative;color:var(--text-sub)}.hero-principles li:before{content:"●";position:absolute;left:0;color:var(--primary)}.list{max-width:900px;padding-left:20px}.list li{margin-bottom:10px;color:var(--text-sub)}.cta{display:inline-block;margin-top:36px;padding:16px 40px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;text-decoration:none;border-radius:999px;font-size:1rem;font-weight:600;box-shadow:0 10px 30px #4f46e540;transition:transform .15s ease,box-shadow .15s ease}.cta:hover{transform:translateY(-2px);box-shadow:0 16px 40px #4f46e559}.cta-section{max-width:900px;padding-top:64px;border-top:1px solid var(--border)}.note{font-size:.9rem;color:var(--text-muted)}@media(max-width:768px){.container{padding:56px 20px}section{margin-bottom:80px}h1{font-size:2.2rem}}
 </style></head> <body>  <main class="container"> <!-- Hero --> <section class="hero"> <h1>
-Gitを起点に、SaaSの変更と運用をシンプルに
+Gitを起点に、SaaSの変更と運用を安心して回せる状態へ
 </h1> <p class="subtitle">
 デプロイ、環境管理、運用フロー。
 <strong>「変更が安全に回り続ける状態」</strong>を、
@@ -8,7 +8,7 @@ Gitを起点に、SaaSの変更と運用をシンプルに
 </p> <p class="hero-summary">
 Git / CI / 環境構成 / デプロイ手順を整理し、
 <strong>開発スピードを落とさず、事故らないSaaS基盤</strong>を作ります。
-</p> <div class="hero-principles"> <ul> <li>Gitを起点にした変更・デプロイフローの整理</li> <li>CI/CD・環境構成の標準化と保守</li> <li>SaaSを前提とした設計</li> <li>将来の自動化を見据えた仕組みづくり</li> </ul> </div> <a href="#contact" class="cta">
+</p> <div class="hero-principles"> <ul> <li>Gitを起点にした変更・デプロイフローの整理</li> <li>CI/CD・環境構成の標準化と保守</li> <li>継続的なデプロイと運用を前提とした設計</li> <li>将来の自動化を見据えた仕組みづくり</li> </ul> </div> <a href="#contact" class="cta">
 SaaSのDevOpsについて相談する（無料・30分）
 </a> </section> <!-- Problems --> <section> <h2>こんな状況になっていませんか？</h2> <p class="note">
 多くのSaaSで、成長フェーズに入ると
@@ -18,7 +18,9 @@ Gitリポジトリを起点に、
 <strong>変更・デプロイ・運用が一貫したDevOpsの形</strong>を整えます。
 </p> <ul class="list"> <li>GitHub Actions等を前提としたCI/CD設計・整理</li> <li>本番 / ステージングなど環境の役割整理</li> <li>安全に変更を出すためのルール・ガードレール設計</li> <li>デプロイ・ロールバックを前提にしたフロー構築</li> <li>運用・監視・アラート設計の見直しと改善</li> </ul> <p class="note">
 「待機」ではなく、
-<strong>変更が破綻しない状態を継続的に設計・維持</strong>します。
+<strong>変更が破綻しない状態を継続的に設計・維持</strong>します。<br>
+変更のたびにゼロから考えるのではなく、
+<strong>判断と設計を積み重ねていくDevOps</strong>を提供します。
 </p> </section> <!-- Target --> <section> <h2>想定している対象</h2> <p class="note">
 以下のような条件のSaaSを想定しています。
 </p> <ul class="list"> <li>SaaS（BtoB / BtoC 問わず）</li> <li>エンジニア1〜5名の少人数チーム</li> <li>本番デプロイや変更が継続的に発生している</li> <li>GitHub + クラウド環境（AWS等／クラウドはお客様管理）</li> <li>成長フェーズで、運用・DevOpsを整理したい</li> </ul> <p class="note">
