@@ -1,0 +1,47 @@
+---
+import { languages, defaultLang, type Lang } from "../i18n/ui";
+
+const currentLocale = (Astro.currentLocale || defaultLang) as Lang;
+---
+
+<nav class="language-switcher">
+  {Object.entries(languages).map(([lang, label]) => (
+    <a
+      href={lang === defaultLang ? "/" : `/${lang}/`}
+      class:list={[{ active: currentLocale === lang }]}
+    >
+      {label}
+    </a>
+  ))}
+</nav>
+
+<style>
+  .language-switcher {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+  }
+
+  .language-switcher a {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    color: #666;
+    background: #f5f5f5;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .language-switcher a:hover {
+    background: #e0e0e0;
+    color: #333;
+  }
+
+  .language-switcher a.active {
+    background: #333;
+    color: #fff;
+  }
+</style>

@@ -1,20 +1,31 @@
 ---
 import "../styles/global.css";
+import LanguageSwitcher from "../components/LanguageSwitcher.astro";
+import { defaultLang, type Lang } from "../i18n/ui";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const currentLocale = (Astro.currentLocale || defaultLang) as Lang;
 ---
 <!DOCTYPE html>
-<html lang="ja">
+<html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Gitを起点に、SaaS運用をシンプルに</title>
-    <meta
-      name="description"
-      content="Gitを起点にSaaS運用を整理・標準化。デプロイ、環境管理、運用フローを再現可能な形に整えます。"
-    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
 
+    <link rel="alternate" hreflang="ja" href="/" />
+    <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="alternate" hreflang="x-default" href="/" />
   </head>
   <body>
+    <LanguageSwitcher />
     <slot />
   </body>
 </html>
