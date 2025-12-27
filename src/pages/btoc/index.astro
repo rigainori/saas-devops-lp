@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { useTranslations } from "../../i18n/ui";
+
+const t = useTranslations('ja-variant-b');
+---
+
+<BaseLayout title={t.meta.title} description={t.meta.description}>
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>
+        {t.hero.title}
+      </h1>
+
+      <p class="subtitle">
+        {t.hero.subtitle}
+        <strong>{t.hero.subtitleStrong}</strong>{t.hero.subtitleEnd}
+      </p>
+
+      <p class="hero-summary">
+        {t.hero.summary}
+        <strong>{t.hero.summaryStrong}</strong>{t.hero.summaryEnd}
+      </p>
+
+      <div class="hero-principles">
+        <ul>
+          {t.hero.principles.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+
+      <a href="#contact" class="cta">
+        {t.hero.cta}
+      </a>
+    </section>
+
+    <!-- Problems -->
+    <section>
+      <h2>{t.problems.title}</h2>
+      <p class="note">
+        {t.problems.note}
+      </p>
+
+      <ul class="list">
+        {t.problems.list.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- Approach -->
+    <section>
+      <h2>{t.approach.title}</h2>
+      <p>
+        {t.approach.intro}
+        <strong>{t.approach.introStrong}</strong>{t.approach.introEnd}
+      </p>
+
+      <ul class="list">
+        {t.approach.list.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+
+      <p class="note">
+        {t.approach.note}
+        <strong>{t.approach.noteStrong1}</strong>{t.approach.noteMiddle}
+        <strong>{t.approach.noteStrong2}</strong>{t.approach.noteEnd}
+      </p>
+    </section>
+
+    <!-- Target -->
+    <section>
+      <h2>{t.target.title}</h2>
+      <p class="note">
+        {t.target.note}
+      </p>
+
+      <ul class="list">
+        {t.target.list.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+
+      <p class="note">
+        {t.target.exclusion}
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta-section">
+      <h2>{t.contact.title}</h2>
+      <p>
+        {t.contact.intro}
+        <strong>{t.contact.introStrong}</strong>{t.contact.introEnd}
+      </p>
+
+      <p class="note">
+        {t.contact.note}
+      </p>
+
+      <a
+        class="cta large"
+        href="https://calendly.com/your-name/30min"
+        target="_blank"
+        rel="noopener"
+      >
+        {t.contact.cta}
+      </a>
+    </section>
+  </main>
+</BaseLayout>
